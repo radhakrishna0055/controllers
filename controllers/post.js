@@ -1,4 +1,6 @@
 exports.getPosts=(req,res)=>
 {
-    res.send("krishna is good boy in the world");
+    res.json({
+        posts:[{title1:'krishna',title:'good boy'}]
+    });
 };
