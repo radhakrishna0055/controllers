@@ -12,6 +12,11 @@ exports.createPostValidator = (req, res, next) => {
         max: 2000
     });
 
+    req.check('head', 'Write a head').notEmpty();
+    req.check('head', 'head must be between 4 to 2000 characters').isLength({
+        min: 4,
+        max: 2000
+    });
 
     const errors = req.validationErrors();
     // if error show the first one as they happen
